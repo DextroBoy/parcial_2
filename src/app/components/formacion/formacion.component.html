@@ -1,1 +1,14 @@
-<p>formacion works!</p>
+<section class="card shadow-sm">
+  <div class="card-header fw-semibold">Formación académica</div>
+  <div class="card-body">
+    @for (e of estudios; track e.titulo) {
+      <div class="item">
+        <div class="d-flex flex-wrap justify-content-between gap-2">
+          <strong>{{ e.titulo }}</strong>
+          <span class="badge text-bg-secondary align-self-start">{{ e.periodo }}</span>
+        </div>
+        <div class="text-muted">{{ e.institucion }}</div>
+      </div>
+    }
+  </div>
+</section>

@@ -1,1 +1,21 @@
-<p>navbar works!</p>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/hoja-de-vida">Mi Portafolio</a>
+    <button class="navbar-toggler" type="button" (click)="colapsado = !colapsado">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" [ngbCollapse]="colapsado">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/hoja-de-vida" routerLinkActive="active">Hoja de vida</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/aprendizaje" routerLinkActive="active">Aprendizaje</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/tema-libre" routerLinkActive="active">Tema libre</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

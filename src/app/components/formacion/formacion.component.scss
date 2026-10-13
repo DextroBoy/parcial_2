@@ -1,0 +1,9 @@
+.item {
+  padding-left: 1rem;
+  border-left: 3px solid #0d6efd;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

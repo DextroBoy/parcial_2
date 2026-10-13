@@ -1,1 +1,15 @@
-<p>contacto works!</p>
+<section class="card shadow-sm h-100">
+  <div class="card-header fw-semibold">Contacto</div>
+  <ul class="list-group list-group-flush">
+    @for (d of datos; track d.etiqueta) {
+      <li class="list-group-item">
+        <small class="text-muted d-block">{{ d.etiqueta }}</small>
+        @if (d.enlace) {
+          <a [href]="d.enlace" target="_blank" rel="noopener">{{ d.valor }}</a>
+        } @else {
+          {{ d.valor }}
+        }
+      </li>
+    }
+  </ul>
+</section>

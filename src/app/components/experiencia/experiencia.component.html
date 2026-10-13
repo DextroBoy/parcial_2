@@ -1,1 +1,17 @@
-<p>experiencia works!</p>
+<section class="card shadow-sm h-100">
+  <div class="card-header fw-semibold">Experiencia y proyectos</div>
+  <div class="card-body">
+    @for (x of experiencias; track x.titulo) {
+      <div class="item">
+        <div class="d-flex flex-wrap justify-content-between gap-2">
+          <strong>{{ x.titulo }}</strong>
+          <span class="badge text-bg-secondary align-self-start">{{ x.periodo }}</span>
+        </div>
+        <p class="mb-2 small">{{ x.descripcion }}</p>
+        @for (t of x.tecnologias; track t) {
+          <span class="badge text-bg-primary me-1">{{ t }}</span>
+        }
+      </div>
+    }
+  </div>
+</section>

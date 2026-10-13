@@ -1,0 +1,27 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.perfil {
+  border-left: 5px solid #0d6efd;
+}
+
+.avatar {
+  flex-shrink: 0;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #0d6efd;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo-seccion {
+  color: #0d6efd;
+  letter-spacing: 0.05em;
+}
