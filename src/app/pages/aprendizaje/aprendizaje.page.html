@@ -1,1 +1,33 @@
-<p>aprendizaje works!</p>
+<header class="mb-4">
+  <h1 class="h3">Aprendizaje del curso</h1>
+  <p class="text-muted">
+    Temas, tecnologías y actividades de Programación en Ambiente Web I.
+  </p>
+
+  <div class="btn-group flex-wrap" role="group" aria-label="Filtro por tipo">
+    @for (f of filtros; track f.valor) {
+      <button
+        type="button"
+        class="btn btn-outline-primary"
+        [class.active]="filtro() === f.valor"
+        (click)="cambiarFiltro(f.valor)"
+      >
+        {{ f.etiqueta }}
+      </button>
+    }
+  </div>
+
+  <p class="small text-muted mt-2 mb-0">
+    Mostrando {{ temasFiltrados().length }} de {{ temas.length }}
+  </p>
+</header>
+
+<div class="row g-3">
+  @for (t of temasFiltrados(); track t.titulo) {
+    <div class="col-12 col-md-6 col-lg-4">
+      <app-tema-card [tema]="t" />
+    </div>
+  } @empty {
+    <p class="text-muted">No hay temas en esta categoría.</p>
+  }
+</div>

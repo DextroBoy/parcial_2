@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  height: 100%;
+}
+
+.tema {
+  transition: transform 0.15s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}

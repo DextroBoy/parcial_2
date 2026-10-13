@@ -1,1 +1,10 @@
-<p>tema-card works!</p>
+<article class="card h-100 shadow-sm tema">
+  <div class="card-body">
+    <span [class]="'badge mb-2 text-bg-' + colorTipo()">{{ tema().tipo }}</span>
+    <h3 class="h5">{{ tema().titulo }}</h3>
+    <p class="small text-muted">{{ tema().descripcion }}</p>
+    @for (t of tema().tecnologias; track t) {
+      <span class="badge text-bg-light border me-1">{{ t }}</span>
+    }
+  </div>
+</article>
